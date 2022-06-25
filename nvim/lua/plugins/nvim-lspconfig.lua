@@ -19,7 +19,7 @@ if not cmp_status_ok then
 end
 
 -- Diagnostic options, see: `:help vim.diagnostic.config`
-vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({ virtual_text = false })
 
 -- Show line diagnostics automatically in hover window
 vim.cmd([[
