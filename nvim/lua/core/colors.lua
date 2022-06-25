@@ -19,8 +19,9 @@ end
 
 -- OneDark styles: dark, darker, cool, deep, warm, warmer, light
 require('onedark').setup {
-  style = 'darker',
+  style = 'warmer',
   colors = { fg = '#b2bbcc' }, --default: #a0a8b7
+  transparent = true
 }
 require('onedark').load()
 
