@@ -6,8 +6,8 @@
 
 -- Load nvim color scheme:
 -- Change the "require" values with your color scheme
--- Available color schemes: onedark, monokai, rose-pine
-local status_ok, color_scheme = pcall(require, 'onedark')
+-- Available color schemes: onedark, monokai, rose-pine, penumbra
+local status_ok, color_scheme = pcall(require, 'penumbra')
 if not status_ok then
   return
 end
@@ -16,19 +16,33 @@ end
 -- See the README of the selected color scheme for the instruction
 -- to use.
 -- e.g.: require('color_scheme').setup{}, vim.cmd('color_scheme')
-
+--
 -- OneDark styles: dark, darker, cool, deep, warm, warmer, light
-require('onedark').setup {
-  style = 'warmer',
-  colors = { fg = '#b2bbcc' }, --default: #a0a8b7
+--
+-- Penumbra styles: balanced_[dark/light], contrast_[dark/light],
+-- more_contrast_[dark/light]
+require('penumbra').setup {
+  style = 'contrast_dark',
   transparent = true
 }
-require('onedark').load()
+require('penumbra').load()
 
 -- statusline color schemes:
 -- import with: require('colors').colorscheme_name
 local M = {}
 
+-- Theme: Penumbra (balanced_dark)
+-- Colors: https://github.com/PaideiaDilemma/penumbra.nvim/blob/master/lua/penumbra/palette.lua
+M.penumbra = {
+  bg = '#303338',
+  fg = '#FFF7ED',
+  pink = '#BC73A4',
+  green = '#47A477',
+  cyan = '#00A2AF',
+  yellow = '#8D9741',
+  orange = '#BA823A',
+  red = '#CA736C',
+}
 -- Theme: OneDark (dark)
 -- Colors: https://github.com/navarasu/onedark.nvim/blob/master/lua/onedark/palette.lua
 M.onedark_dark = {
