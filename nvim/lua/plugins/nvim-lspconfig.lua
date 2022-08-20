@@ -128,11 +128,33 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches.
 -- Add your language server below:
-local servers = { 'bashls', 'pyright', 'clangd', 'html', 'cssls', 'tsserver' }
-
+local servers = {
+  bashls = {},
+  pyright = {},
+  clangd = {},
+  tsserver = {},
+  html = {
+    cmd = {'vscode-html-languageserver', '--stdio'}
+  },
+  cssls = {
+    cmd = {'vscode-css-languageserver', '--stdio'}
+  },
+  jsonls = {
+    cmd = {'vscode-json-languageserver', '--stdio'}
+  },
+  sumneko_lua = {
+    settings = {
+      Lua = {
+        runtime = {
+          version = 'LuaJIT',
+        },
+      }
+    }
+  }
+}
 -- Call setup
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
+for lsp, conf in pairs(servers) do
+  local options = {
     on_attach = on_attach,
     root_dir = root_dir,
     capabilities = capabilities,
@@ -141,4 +163,8 @@ for _, lsp in ipairs(servers) do
       debounce_text_changes = 150,
     }
   }
+  for key, val in pairs(conf) do
+    options[key] = val
+  end
+  lspconfig[lsp].setup(options)
 end
