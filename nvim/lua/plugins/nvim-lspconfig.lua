@@ -21,7 +21,7 @@ end
 -- Diagnostic options, see: `:help vim.diagnostic.config`
 vim.diagnostic.config({
   update_in_insert = true,
-  virtual_text = false
+  virtual_text = false,
   float = {
     focusable = false,
     style = "minimal",
