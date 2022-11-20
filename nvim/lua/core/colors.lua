@@ -4,8 +4,8 @@
 
 -- See: https://github.com/brainfucksec/neovim-lua#appearance
 
--- Load nvim color scheme:
--- Change the "require" values with your color scheme
+-- Neovim UI color scheme.
+-- Add the selected color scheme in the `require` values below.
 -- Available color schemes: onedark, monokai, rose-pine, penumbra
 local status_ok, color_scheme = pcall(require, 'penumbra')
 if not status_ok then
@@ -27,8 +27,19 @@ require('penumbra').setup {
 }
 require('penumbra').load()
 
--- statusline color schemes:
--- import with: require('colors').colorscheme_name
+--[[
+Statusline color schemes.
+Import the following color schemes in your statusline.lua file
+with: `require('core/colors').colorscheme_name` where the colors scheme name
+is the value of the variables below.
+
+e.g.: `local colors = require('core/colors').onedark_dark
+See: `core/statusline.lua`
+
+The color schemes below are created by following the "palette" file color
+schemes. Color names are adapted to maintain a pattern, original names can be
+different.
+--]]
 local M = {}
 
 -- Theme: Penumbra (balanced_dark)
