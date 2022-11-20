@@ -114,8 +114,9 @@ return packer.startup(function(use)
   }
 
   -- Markdown
-  use {
-    'iamcco/markdown-preview.nvim'
+  use{
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
   }
   vim.g.mkdp_auto_start = 1
 
@@ -124,6 +125,15 @@ return packer.startup(function(use)
   -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = [[
+      cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release &&
+      cmake --build build --config Release &&
+      cmake --install build --prefix build]]
+    }
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
