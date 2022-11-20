@@ -69,8 +69,7 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
 
 -- Telescope
-local builtin = require('telescope.builtin')
-map('n', '<leader>ff', ':Telescope find_files<CR>')
-map('n', '<leader>fg', ':Telescope live_grep<CR>')
-map('n', '<leader>fb', ':Telescope buffers<CR>')
-map('n', '<leader>fh', ':Telescope help_tags<CR>')
+map('n', '<leader>t', ':Telescope find_files<CR>')
+map('n', '<leader>tg', ':Telescope live_grep<CR>')
+map('n', '<leader>tb', ':Telescope buffers<CR>')
+map('n', '<leader>th', ':Telescope help_tags<CR>')
