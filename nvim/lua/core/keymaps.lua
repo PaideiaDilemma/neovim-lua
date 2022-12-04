@@ -73,3 +73,9 @@ map('n', '<leader>t', ':Telescope find_files<CR>')
 map('n', '<leader>tg', ':Telescope live_grep<CR>')
 map('n', '<leader>tb', ':Telescope buffers<CR>')
 map('n', '<leader>th', ':Telescope help_tags<CR>')
+
+-- Glance
+map('n', 'gr', ':Glance references<CR>')
+map('n', 'gD', ':Glance definitions<CR>')
+map('n', 'gT', ':Glance type_definitions<CR>')
+map('n', 'gI', ':Glance implementations<CR>')

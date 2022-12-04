@@ -46,6 +46,14 @@ Neovim KISS configuration with Lua
 
 [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - A Lua fork of vim-devicons
 
+[markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - A plugin for markdown preview in your browser.
+
+[nvim-telescope](https://github.com/nvim-telescope/telescope.nvim) - A highly extendable fuzzy finder
+
+[telescope-fzf-native](https://github.com/nvim-telescope/telescope-fzf-native.nvim) - Native impl of fzf
+
+[glance](https://github.com/DNLHC/glance.nvim) - A pretty window for previewing, navigating and editing your LSP locations in one place,
+
 ## Directory Tree
 
 `${HOME}/.config/nvim`
@@ -95,6 +103,8 @@ See: https://github.com/nanotee/nvim-lua-guide#where-to-put-lua-files
 * [nvim-tree.lua](nvim/lua/plugins/nvim-tree.lua): File manager settings
 
 * [nvim-treesitter](nvim/lua/plugins/nvim-treesitter): Treesitter interface configuration
+
+* [glance.lua](https://github.com/DNLHC/glance.nvim): Glance configuration
 
 ## Installation
 
@@ -174,6 +184,8 @@ See: [nvim-lspconfig #doc/server_configurations.md](https://github.com/neovim/nv
 ### Available Colorschemes
 
 * [OneDark](https://github.com/navarasu/onedark.nvim)
+
+* [Penumbra](https://github.com/PaideiaDilemma/penumbra.nvim.git)
 
 * [Neovim Monokai](https://github.com/tanvirtin/monokai.nvim)
 
