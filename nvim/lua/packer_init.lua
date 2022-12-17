@@ -138,6 +138,15 @@ return packer.startup(function(use)
     "dnlhc/glance.nvim"
   }
 
+	use {
+		"jiaoshijie/undotree",
+		config = function()
+			require('undotree').setup()
+		end,
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -79,3 +79,6 @@ map('n', 'gr', ':Glance references<CR>')
 map('n', 'gD', ':Glance definitions<CR>')
 map('n', 'gT', ':Glance type_definitions<CR>')
 map('n', 'gI', ':Glance implementations<CR>')
+
+-- Undotree
+map('n', '<leader>u', ':lua require("undotree").toggle()<CR>')
