@@ -26,6 +26,17 @@ map('', '<right>', '<nop>')
 -- Map Esc to kk
 map('i', 'kk', '<Esc>')
 
+-- Move visual blocks up and down (auto indent)
+map('v', 'J', ":m '>+1<CR>gv=gv")
+map('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- Keep cursor in the middle, when searching
+map('n', 'n', 'nzzzv')
+map('n', 'N', 'Nzzzv')
+
+-- Paste, but keep register content
+map('x', '<leader>p', '"_dP')
+
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
 
