@@ -17,7 +17,7 @@ if not status_ok then
 end
 
 -- Set colorscheme (from core/colors.lua/colorscheme_name)
-local colors = require('core/colors').penumbra
+local colors = require('core/colors').penumbra_contrast_dark
 
 local vi_mode_colors = {
   NORMAL = colors.cyan,

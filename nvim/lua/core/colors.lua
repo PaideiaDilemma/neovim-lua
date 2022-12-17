@@ -44,15 +44,15 @@ local M = {}
 
 -- Theme: Penumbra (balanced_dark)
 -- Colors: https://github.com/PaideiaDilemma/penumbra.nvim/blob/master/lua/penumbra/palette.lua
-M.penumbra = {
-  bg = '#303338',
-  fg = '#FFF7ED',
-  pink = '#BC73A4',
-  green = '#47A477',
-  cyan = '#00A2AF',
-  yellow = '#8D9741',
-  orange = '#BA823A',
-  red = '#CA736C',
+M.penumbra_contrast_dark = {
+  bg = '#3E4044',
+  fg = '#CECECE',
+  pink = '#BE85D1',
+  green = '#44B689',
+  cyan = '#00B1CE',
+  yellow = '#A1A641',
+  orange = '#D68B47',
+  red = '#DF7C8E',
 }
 -- Theme: OneDark (dark)
 -- Colors: https://github.com/navarasu/onedark.nvim/blob/master/lua/onedark/palette.lua
