@@ -32,6 +32,14 @@ autocmd('BufEnter', {
   command = 'set fo-=c fo-=r fo-=o'
 })
 
+-- Show line diagnostics automatically in hover window
+autocmd('CursorHold', {
+  pattern = '',
+  callback = function()
+    vim.diagnostic.open_float(nil, { focus = false })
+  end
+})
+
 -- Settings for filetypes:
 --------------------------
 

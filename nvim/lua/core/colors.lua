@@ -21,11 +21,11 @@ end
 --
 -- Penumbra styles: balanced_[dark/light], contrast_[dark/light],
 -- more_contrast_[dark/light]
-require('penumbra').setup {
+color_scheme.setup {
   style = 'contrast_dark',
   transparent = true
 }
-require('penumbra').load()
+color_scheme.load()
 
 --[[
 Statusline color schemes.
