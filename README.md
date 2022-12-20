@@ -52,9 +52,11 @@ Neovim KISS configuration with Lua
 
 [telescope-fzf-native](https://github.com/nvim-telescope/telescope-fzf-native.nvim) - Native impl of fzf
 
+[telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim) - Visualize your undo tree and fuzzy-search changes in it
+
 [glance](https://github.com/DNLHC/glance.nvim) - A pretty window for previewing, navigating and editing your LSP locations in one place
 
-[telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim) - Visualize your undo tree and fuzzy-search changes in it
+[based.nvim](https://github.com/trmckay/based.nvim) - a Neovim plugin for quickly converting buffer text to/from hex
 
 ## Directory Tree
 

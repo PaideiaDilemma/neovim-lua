@@ -115,14 +115,14 @@ return packer.startup(function(use)
 
   -- Markdown
   use{
-    "iamcco/markdown-preview.nvim",
+    'iamcco/markdown-preview.nvim',
     run = function() vim.fn["mkdp#util#install"]() end,
   }
   vim.g.mkdp_auto_start = 1
 
+  -- Telescope
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  -- or                            , branch = '0.1.x',
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -135,15 +135,21 @@ return packer.startup(function(use)
   }
 
   use {
-    "dnlhc/glance.nvim"
-  }
-
-  use {
     'debugloop/telescope-undo.nvim',
     requires = { 'nvim-telescope/telescope.nvim' },
     config = function()
       require("telescope").load_extension("undo")
     end,
+  }
+
+  -- Vscode like goto references/definitions
+  use {
+    'dnlhc/glance.nvim'
+  }
+
+  -- Based number conversion
+  use {
+    'trmckay/based.nvim'
   }
 
   -- Automatically set up your configuration after cloning packer.nvim

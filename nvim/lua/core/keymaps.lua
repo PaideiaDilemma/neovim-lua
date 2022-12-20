@@ -93,3 +93,6 @@ map('n', 'gI', ':Glance implementations<CR>')
 
 -- Undotree
 map('n', '<leader>u', ':Telescope undo<CR>')
+
+-- Based number conversion
+map('n', '<C-b>', ':lua require("based").convert()<CR>')
