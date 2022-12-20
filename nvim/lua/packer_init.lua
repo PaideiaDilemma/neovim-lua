@@ -138,15 +138,13 @@ return packer.startup(function(use)
     "dnlhc/glance.nvim"
   }
 
-	use {
-		"jiaoshijie/undotree",
-		config = function()
-			require('undotree').setup()
-		end,
-		requires = {
-			"nvim-lua/plenary.nvim",
-		},
-	}
+  use {
+    'debugloop/telescope-undo.nvim',
+    requires = { 'nvim-telescope/telescope.nvim' },
+    config = function()
+      require("telescope").load_extension("undo")
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

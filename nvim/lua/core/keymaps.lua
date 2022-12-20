@@ -92,4 +92,4 @@ map('n', 'gT', ':Glance type_definitions<CR>')
 map('n', 'gI', ':Glance implementations<CR>')
 
 -- Undotree
-map('n', '<leader>u', ':lua require("undotree").toggle()<CR>')
+map('n', '<leader>u', ':Telescope undo<CR>')

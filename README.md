@@ -46,13 +46,15 @@ Neovim KISS configuration with Lua
 
 [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - A Lua fork of vim-devicons
 
-[markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - A plugin for markdown preview in your browser.
+[markdown-preview](https://github.com/iamcco/markdown-preview.nvim) - A plugin for markdown preview in your browser
 
 [nvim-telescope](https://github.com/nvim-telescope/telescope.nvim) - A highly extendable fuzzy finder
 
 [telescope-fzf-native](https://github.com/nvim-telescope/telescope-fzf-native.nvim) - Native impl of fzf
 
-[glance](https://github.com/DNLHC/glance.nvim) - A pretty window for previewing, navigating and editing your LSP locations in one place,
+[glance](https://github.com/DNLHC/glance.nvim) - A pretty window for previewing, navigating and editing your LSP locations in one place
+
+[telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim) - Visualize your undo tree and fuzzy-search changes in it
 
 ## Directory Tree
 
