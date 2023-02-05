@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 
 
 -- Install plugins
-  -- Add you plugins here:
+-- Add you plugins here:
 require("lazy").setup({
   -- File explorer
   'kyazdani42/nvim-tree.lua',
@@ -30,7 +30,7 @@ require("lazy").setup({
   {
     'windwp/nvim-autopairs',
     config = function()
-      require('nvim-autopairs').setup{}
+      require('nvim-autopairs').setup {}
     end
   },
 
@@ -86,7 +86,7 @@ require("lazy").setup({
     'lewis6991/gitsigns.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
-      require('gitsigns').setup{}
+      require('gitsigns').setup {}
     end
   },
 
@@ -107,7 +107,7 @@ require("lazy").setup({
   -- Telescope
   {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
-    dependencies = { {'nvim-lua/plenary.nvim'} }
+    dependencies = { { 'nvim-lua/plenary.nvim' } }
   },
 
   {
@@ -135,4 +135,13 @@ require("lazy").setup({
   {
     'trmckay/based.nvim'
   },
+
+  {
+    'folke/which-key.nvim',
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup{}
+    end
+  }
 })

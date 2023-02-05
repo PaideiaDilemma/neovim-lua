@@ -60,6 +60,8 @@ Neovim KISS configuration with Lua
 
 [based.nvim](https://github.com/trmckay/based.nvim) - a Neovim plugin for quickly converting buffer text to/from hex
 
+[which-key.nvim](https://github.com/folke/which-key.nvim) - key binding popup
+
 ## Directory Tree
 
 `${HOME}/.config/nvim`
