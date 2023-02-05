@@ -118,14 +118,6 @@ require("lazy").setup({
       cmake --install build --prefix build]]
   },
 
-  {
-    'debugloop/telescope-undo.nvim',
-    dependencies = { 'nvim-telescope/telescope.nvim' },
-    config = function()
-      require("telescope").load_extension("undo")
-    end,
-  },
-
   -- Vscode like goto references/definitions
   {
     'dnlhc/glance.nvim'
