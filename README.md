@@ -20,9 +20,11 @@ Neovim KISS configuration with Lua
 
 ## Plugins
 
-[packer.nvim](https://github.com/wbthomason/packer.nvim) -  A use-package inspired plugin manager for Neovim
+[lazy.nvim](https://github.com/folke/lazy.nvim) -  A is a modern plugin manager for Neovim
 
 [feline.nvim](https://github.com/feline-nvim/feline.nvim) - A minimal, stylish and customizable statusline for Neovim written in Lua
+
+[mason.nvim](https://github.com/williamboman/mason.nvim) - Easily install and manage LSP servers, DAP servers, linters, and formatters.
 
 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - A collection of common configurations for Neovim's built-in language server client
 
@@ -76,7 +78,7 @@ See: https://github.com/nanotee/nvim-lua-guide#where-to-put-lua-files
 
 `/nvim/lua`
 
-* [packer_init.lua](nvim/lua/packer_init.lua): Load plugins
+* [lazy_init.lua](nvim/lua/lazy_init.lua): Load plugins
 
 `/nvim/lua/core`
 
@@ -127,22 +129,9 @@ mv ~/.config/nvim ~/.config/nvim.backup
 5. Download neovim-lua with `git` and copy the `nvim` folder in the `${HOME}/.config` directory:
 
 ```term
-git clone https://github.com/brainfucksec/neovim-lua.git
+git clone https://github.com/PaideiaDilemma/neovim-lua.git
 cd neovim-lua/
 cp -Rv nvim ~/.config/
-```
-
-6. Install [packer.nvim](https://github.com/wbthomason/packer.nvim) for install and manage the plugins:
-
-```term
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-7. Run Neovim with `PackerSync` command:
-
-```term
-nvim +PackerSync
 ```
 
 ## LSP Configuration
