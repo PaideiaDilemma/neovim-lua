@@ -83,6 +83,7 @@ return packer.startup(function(use)
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
     'mfussenegger/nvim-dap',
+    'mfussenegger/nvim-lint'
   }
 
   -- Autocomplete

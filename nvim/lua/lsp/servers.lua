@@ -13,7 +13,7 @@ local server_config = {
     settings = {
       pylsp = {
         plugins = {
-          flake8 = {
+          pylint = {
             enabled = true
           }
         }
