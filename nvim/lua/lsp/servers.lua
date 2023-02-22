@@ -37,7 +37,7 @@ local server_config = {
     cmd = {'vscode-json-languageserver', '--stdio'}
   },
 
-  sumneko_lua = {
+  lua_ls = {
     settings = {
       Lua = {
         diagnostics = {
