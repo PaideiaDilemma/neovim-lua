@@ -7,13 +7,13 @@ Website: https://github.com/brainfucksec/neovim-lua
 --]]
 
 -- Import Lua modules
-require('core/options')
-require('lazy_init')
+require('core/lazy')
 require('core/autocmds')
 require('core/keymaps')
 require('core/colors')
 require('core/statusline')
 require('lsp/mason-lspconfig')
+require('core/options')
 require('plugins/nvim-tree')
 require('plugins/indent-blankline')
 require('plugins/nvim-cmp')

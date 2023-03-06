@@ -6,6 +6,12 @@
 Neovim KISS configuration with Lua
 </h3>
 
+---
+
+###  Breaking change: New plugin manager [lazy.nvim](https://github.com/folke/lazy.nvim), see [ISSUE #27](https://github.com/brainfucksec/neovim-lua/issues/27)
+
+---
+
 ## Table of Contents
 
 * [Plugins](#plugins)
@@ -17,12 +23,15 @@ Neovim KISS configuration with Lua
 * [Keymaps](#keymaps)
 * [Configuration Check](#configuration-check)
 * [Screenshots](#screenshots)
+* [Guides and Resources](#guides-and-resources)
+* [Other Neovim Lua Projects and Examples](#other-neovim-lua-projects-and-examples)
+* [Lua Resources](#lua-resources)
 
 ## Plugins
 
-[lazy.nvim](https://github.com/folke/lazy.nvim) -  A is a modern plugin manager for Neovim
+[lazy.nvim](https://github.com/folke/lazy.nvim) - A modern plugin manager for Neovim
 
-[feline.nvim](https://github.com/feline-nvim/feline.nvim) - A minimal, stylish and customizable statusline for Neovim written in Lua
+[feline.nvim](https://github.com/freddiehaddad/feline.nvim) (freddiehaddad Fork)- A minimal, stylish and customizable statusline for Neovim written in Lua
 
 [mason.nvim](https://github.com/williamboman/mason.nvim) - Easily install and manage LSP servers, DAP servers, linters, and formatters.
 
@@ -78,10 +87,6 @@ Neovim KISS configuration with Lua
 
 See: https://github.com/nanotee/nvim-lua-guide#where-to-put-lua-files
 
-`/nvim/lua`
-
-* [lazy_init.lua](nvim/lua/lazy_init.lua): Load plugins
-
 `/nvim/lua/core`
 
 * [autocmds.lua](nvim/lua/core/autocmds.lua): Define autocommands with Lua APIs
@@ -89,6 +94,8 @@ See: https://github.com/nanotee/nvim-lua-guide#where-to-put-lua-files
 * [colors.lua](nvim/lua/core/colors.lua): Define Neovim and plugins color scheme
 
 * [keymaps.lua](nvim/lua/core/keymaps.lua): Keymaps configuration file, vim/neovim and plugins keymaps
+
+* [lazy.lua](nvim/lua/core/lazy.lua): Plugin manager configuration file
 
 * [options.lua](nvim/lua/core/options.lua): General Neovim settings
 
@@ -99,8 +106,6 @@ See: https://github.com/nanotee/nvim-lua-guide#where-to-put-lua-files
 * [lspconfig.lua](nvim/lua/lsp/lspconfig.lua): LSP configuration (language servers, keybinding)
 
 `/nvim/lua/plugins`
-
-* [packer.lua](nvim/lua/plugins/packer.lua): Plugin manager settings
 
 * [alpha-nvim.lua](nvim/lua/plugins/alpha-nvim.lua): Dashboard
 
@@ -118,7 +123,7 @@ See: https://github.com/nanotee/nvim-lua-guide#where-to-put-lua-files
 
 1. Install [Neovim v0.8.x](https://github.com/neovim/neovim/releases/latest).
 
-2. Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads), (for the font of the screenshots install [Cozette Font](https://github.com/slavfox/Cozette)).
+2. Install [Nerd Fonts](https://www.nerdfonts.com/font-downloads), (the font of the screenshots are `JetBrainsMono Nerd Font`).
 
 3. Install [Node.js - npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for download packages of LSP language servers, see: [LSP Configuration](#lsp-configuration).
 
@@ -134,6 +139,14 @@ mv ~/.config/nvim ~/.config/nvim.backup
 git clone https://github.com/PaideiaDilemma/neovim-lua.git
 cd neovim-lua/
 cp -Rv nvim ~/.config/
+```
+
+6. Install [lazy.nvim](https://github.com/folke/lazy.nvim) for install and manage the plugins, see: [lazy.nvim - Installation](https://github.com/folke/lazy.nvim#-installation)
+
+7. Run Neovim for download/sync plugins with `lazy`
+
+```term
+nvim
 ```
 
 ## LSP Configuration
@@ -229,7 +242,7 @@ These are the default keymaps, in the following shortcuts, the `<leader>` key is
 | `<Ctrl> + n`         | Normal        | Open NvimTree                                     |
 | `<leader>z`          | Normal        | Open Tagbar                                       |
 
-## Configuration check
+## Configuration Check
 
 - Open nvim and run command `checkhealth`, you should not see any error in the output (except for the one related to the Python 2 interpreter if don't have it):
 
@@ -271,7 +284,7 @@ See: `:help startuptime`
 
 </details>
 
-## Guides and resources
+## Guides and Resources
 
 * https://neovim.io/doc/user/lua.html
 
@@ -281,7 +294,7 @@ See: `:help startuptime`
 
 * https://www.old.reddit.com/r/neovim/
 
-## Other Neovim Lua projects and examples
+## Other Neovim Lua Projects and Examples
 
 * https://github.com/LunarVim/Neovim-from-scratch
 
@@ -291,7 +304,7 @@ See: `:help startuptime`
 
 * https://github.com/crivotz/nv-ide
 
-## Lua resources
+## Lua Resources
 
 * Lua in Y minutes - https://learnxinyminutes.com/docs/lua/
 
