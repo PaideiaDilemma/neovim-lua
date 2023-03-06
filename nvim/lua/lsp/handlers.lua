@@ -5,7 +5,7 @@
 local M = {}
 local keymap = vim.keymap.set
 
-local cmp_nvim_lsp = require "cmp_nvim_lsp"
+local cmp_nvim_lsp = require('cmp_nvim_lsp')
 
 -- M.capabilities = vim.lsp.protocol.make_client_capabilities()
 -- M.capabilities.offsetEncoding = { "utf-16" }

@@ -35,12 +35,13 @@ lazy.setup({
     -- Colorscheme:
     -- The colorscheme should be available when starting Neovim.
     {
-      'navarasu/onedark.nvim',
+      'PaideiaDilemma/penumbra.nvim',
       lazy = false, -- make sure we load this during startup if it is your main colorscheme
       priority = 1000, -- make sure to load this before all the other start plugins
     },
 
     -- other colorschemes:
+    'navarasu/onedark.nvim',
     { 'tanvirtin/monokai.nvim', lazy = true },
     { 'https://github.com/rose-pine/neovim', name = 'rose-pine', lazy = true },
 
@@ -100,7 +101,13 @@ lazy.setup({
     },
 
     -- LSP
-    { 'neovim/nvim-lspconfig' },
+    {
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'neovim/nvim-lspconfig',
+      'mfussenegger/nvim-dap',
+      'mfussenegger/nvim-lint'
+    },
 
     -- Autocomplete
     {
@@ -116,6 +123,47 @@ lazy.setup({
         'hrsh7th/cmp-buffer',
         'saadparwaiz1/cmp_luasnip',
       },
+    },
+
+    -- Markdown
+    {
+      'iamcco/markdown-preview.nvim',
+      build = function()
+        vim.fn["mkdp#util#install"]()
+      end
+    },
+
+    -- Telescope
+    {
+      'nvim-telescope/telescope.nvim', branch = '0.1.x',
+      dependencies = { { 'nvim-lua/plenary.nvim' } }
+    },
+
+    {
+      'nvim-telescope/telescope-fzf-native.nvim',
+      build = [[
+        cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release &&
+        cmake --build build --config Release &&
+        cmake --install build --prefix build]]
+    },
+
+    -- Vscode like goto references/definitions
+    {
+      'dnlhc/glance.nvim'
+    },
+
+    -- Based number conversion
+    {
+      'trmckay/based.nvim'
+    },
+
+    {
+      'folke/which-key.nvim',
+      config = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+        require("which-key").setup{}
+      end
     },
   },
 })
