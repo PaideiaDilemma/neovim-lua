@@ -9,12 +9,16 @@
 local server_config = {
   bashls = {},
   --pyright = {},
+  ruff_lsp = {},
   pylsp = {
     settings = {
       pylsp = {
         plugins = {
-          pylint = {
-            enabled = true
+          pycodestyle = {
+            enabled = false
+          },
+          pyflakes = {
+            enabled = false
           }
         }
       }
