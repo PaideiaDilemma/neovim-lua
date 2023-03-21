@@ -165,5 +165,9 @@ lazy.setup({
         require("which-key").setup{}
       end
     },
+    {
+      'echasnovski/mini.nvim',
+      version = false
+    }
   },
 })
