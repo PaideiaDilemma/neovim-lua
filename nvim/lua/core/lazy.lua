@@ -165,9 +165,34 @@ lazy.setup({
         require("which-key").setup{}
       end
     },
+
     {
       'echasnovski/mini.nvim',
       version = false
-    }
+    },
+
+    {
+      'lervag/vimtex',
+      config = function()
+        vim.g.vimtex_view_general_viewer = 'okular'
+        vim.g.vimtex_view_general_options = '--unique file:@pdf\\#src:@line@tex'
+      end
+    },
+
+    {
+      "iurimateus/luasnip-latex-snippets.nvim",
+      -- replace "lervag/vimtex" with "nvim-treesitter/nvim-treesitter" if you're
+      -- using treesitter.
+      dependencies = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
+      config = function()
+        require('luasnip-latex-snippets').setup()
+        -- or setup({ use_treesitter = true })
+      end,
+      -- treesitter is required for markdown
+      ft = { "tex", "markdown" },
+    },
+    {
+      'nvim-treesitter/nvim-treesitter-context'
+    },
   },
 })
